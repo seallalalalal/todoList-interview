@@ -1,0 +1,33 @@
+version: "2"
+
+services:
+  api:
+    restart: on-failure
+    build: ./services/todoList-backend
+    container_name: todolist-api
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://user:pass@postgres:5432/db
+      NODE_ENV: development
+    ports:
+      - "8080:3000"
+    command: npm start
+
+  postgres:
+    image: postgres:11
+    container_name: todolist-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: db
+
+  ui:
+    restart: on-failure
+    build: ./services/todoList-frontend
+    container_name: todolist-ui
+    ports:
+      - "80:3000"
+    command: npm start
