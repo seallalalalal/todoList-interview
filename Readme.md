@@ -78,9 +78,10 @@ Response:
 ### comment
 
 | attribute    | Type                            | Example                              |
-| :----------- | :------------------------------ | :----------------------------------- | ------------ | ---- | ----------------------------- |
+| :----------- | :------------------------------ | :----------------------------------- |
 | comment_id   | VARCHAR(36)</br>**Primary Key** | 842f638c-4f58-11ed-8453-0242ac1b0003 |
-| content      | TEXT                            | "content"                            | comment-time | DATE | 2021-09-27 15:22:53.679985+02 |
+| content      | TEXT                            | "content"                            |
+| comment-time | DATE                            | 2021-09-27 15:22:53.679985+02        |
 | comment-task | VARCHAR(36)</br>**Foreign Key** | 842f638c-4f58-11ed-8453-0242ac1b0003 |
 
 ### history
