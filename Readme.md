@@ -15,6 +15,8 @@ backend 只有初始專案 QwQ<br>
 - backend: http://localhost:8080
 - database: http://localhost:5432
 
+# API
+
 | Path           | Method | Function                                        |
 | :------------- | :----- | :---------------------------------------------- |
 | `/login`       | POST   | Let user login and if success return token      |
